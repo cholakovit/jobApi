@@ -1,0 +1,397 @@
+[2024-05-04T09:18:18.414] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:19:12.565] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:19:38.594] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:20:42.905] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:21:06.464] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:21:38.989] [INFO] default - {
+  ALLUSERSPROFILE: 'C:\\ProgramData',
+  APPDATA: 'C:\\Users\\Laptop\\AppData\\Roaming',
+  CGO_ENABLED: '1',
+  ChocolateyInstall: 'C:\\ProgramData\\chocolatey',
+  ChocolateyLastPathUpdate: '133176584579577321',
+  CHROME_CRASHPAD_PIPE_NAME: '\\\\.\\pipe\\crashpad_150660_MAAYKOHGOHISJKWN',
+  COLOR: '1',
+  COLORTERM: 'truecolor',
+  CommonProgramFiles: 'C:\\Program Files\\Common Files',
+  'CommonProgramFiles(x86)': 'C:\\Program Files (x86)\\Common Files',
+  CommonProgramW6432: 'C:\\Program Files\\Common Files',
+  COMPUTERNAME: 'DESKTOP-QAI15E1',
+  ComSpec: 'C:\\Windows\\system32\\cmd.exe',
+  DriverData: 'C:\\Windows\\System32\\Drivers\\DriverData',
+  EDITOR: 'C:\\Windows\\notepad.exe',
+  FPS_BROWSER_APP_PROFILE_STRING: 'Internet Explorer',
+  FPS_BROWSER_USER_PROFILE_STRING: 'Default',
+  GIT_ASKPASS: 'c:\\Users\\Laptop\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh',
+  GIT_LFS_PATH: 'C:\\Program Files\\Git LFS',
+  GOPATH: 'C:\\Users\\Laptop\\go',
+  HOME: 'C:\\Users\\Laptop',
+  HOMEDRIVE: 'C:',
+  HOMEPATH: '\\Users\\Laptop',
+  INIT_CWD: 'D:\\web\\TS\\api2',
+  JWT_LIFETIME: '30d',
+  JWT_SECRET: 'jwtsecret',
+  LANG: 'en_US.UTF-8',
+  LOCALAPPDATA: 'C:\\Users\\Laptop\\AppData\\Local',
+  LOGONSERVER: '\\\\DESKTOP-QAI15E1',
+  MONGO_URI: 'mongodb://127.0.0.1:27017/jobsbg',
+  NODE: 'C:\\Program Files\\nodejs\\node.exe',
+  NODE_EXE: 'C:\\Program Files\\nodejs\\\\node.exe',
+  NPM_CLI_JS: 'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+  npm_command: 'run-script',
+  npm_config_cache: 'C:\\Users\\Laptop\\AppData\\Local\\npm-cache',
+  npm_config_globalconfig: 'C:\\Program Files\\nodejs\\etc\\npmrc',
+  npm_config_global_prefix: 'C:\\Program Files\\nodejs',
+  npm_config_init_author_name: 'cholakovit',
+  npm_config_init_module: 'C:\\Users\\Laptop\\.npm-init.js',
+  npm_config_local_prefix: 'D:\\web\\TS\\api2',
+  npm_config_node_gyp: 'C:\\Users\\Laptop\\AppData\\Roaming\\nvm\\v18.20.2\\node_modules\\npm\\node_modules\\node-gyp\\bin\\node-gyp.js',
+  npm_config_noproxy: '',
+  npm_config_npm_version: '10.5.0',
+  npm_config_prefix: 'C:\\Program Files\\nodejs',
+  npm_config_userconfig: 'C:\\Users\\Laptop\\.npmrc',
+  npm_config_user_agent: 'npm/10.5.0 node/v18.20.2 win32 x64 workspaces/false',
+  npm_execpath: 'C:\\Users\\Laptop\\AppData\\Roaming\\nvm\\v18.20.2\\node_modules\\npm\\bin\\npm-cli.js',
+  npm_lifecycle_event: 'dev',
+  npm_lifecycle_script: 'nodemon --exec ts-node src/index.ts',
+  npm_node_execpath: 'C:\\Program Files\\nodejs\\node.exe',
+  npm_package_json: 'D:\\web\\TS\\api2\\package.json',
+  npm_package_name: 'api2',
+  npm_package_version: '1.0.0',
+  NPM_PREFIX_NPM_CLI_JS: 'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+  NUMBER_OF_PROCESSORS: '8',
+  NVM_HOME: 'C:\\Users\\Laptop\\AppData\\Roaming\\nvm',
+  NVM_SYMLINK: 'C:\\Program Files\\nodejs',
+  OneDrive: 'C:\\Users\\Laptop\\OneDrive',
+  OPENSSL_CONF: 'C:\\Program Files\\PostgreSQL\\psqlODBC\\etc\\openssl.cnf',
+  ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+  OS: 'Windows_NT',
+  PATH: 'D:\\web\\TS\\api2/node_modules/.bin;D:\\web\\TS\\api2\\node_modules\\.bin;D:\\web\\TS\\node_modules\\.bin;D:\\web\\node_modules\\.bin;D:\\node_modules\\.bin;C:\\Users\\Laptop\\AppData\\Roaming\\nvm\\v18.20.2\\node_modules\\npm\\node_modules\\@npmcli\\run-script\\lib\\node-gyp-bin;C:\\Users\\Laptop\\AppData\\Local\\cloud-code\\installer\\google-cloud-sdk\\bin;C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.2.13-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;D:\\APPLICATIONS\\oracle\\WINDOWS.X64_193000_db_home\\bin;D:\\APPLICATIONS\\WINDOWS.X64_213000_db_home\\bin;D:\\APPLICATIONS\\dbhomeXE\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\GitHub CLI\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\SafeNet\\Authentication\\SAC\\x64;C:\\Program Files\\SafeNet\\Authentication\\SAC\\x32;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git LFS;C:\\Users\\Laptop\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Program Files\\Go\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\MongoDB\\Server\\6.0\\bin;C:\\Users\\Laptop\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\Laptop\\.cargo\\bin;C:\\Users\\Laptop\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Laptop\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\Git\\cmd\\;C:\\Users\\Laptop\\AppData\\Local\\Yarn\\bin;C:\\Users\\Laptop\\go\\bin;C:\\Users\\Laptop\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Users\\Laptop\\go\\bin;C:\\Users\\Laptop\\AppData\\Local\\GitHubDesktop\\bin',
+  PATHEXT: '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL',
+  PORT: '3000',
+  PROCESSOR_ARCHITECTURE: 'AMD64',
+  PROCESSOR_IDENTIFIER: 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel',
+  PROCESSOR_LEVEL: '6',
+  PROCESSOR_REVISION: '2a07',
+  ProgramData: 'C:\\ProgramData',
+  ProgramFiles: 'C:\\Program Files',
+  'ProgramFiles(x86)': 'C:\\Program Files (x86)',
+  ProgramW6432: 'C:\\Program Files',
+  PROMPT: '$P$G',
+  PSModulePath: 'C:\\Users\\Laptop\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules',
+  PUBLIC: 'C:\\Users\\Public',
+  SESSIONNAME: 'Console',
+  SystemDrive: 'C:',
+  SystemRoot: 'C:\\Windows',
+  TEMP: 'C:\\Users\\Laptop\\AppData\\Local\\Temp',
+  TERM_PROGRAM: 'vscode',
+  TERM_PROGRAM_VERSION: '1.89.0',
+  TMP: 'C:\\Users\\Laptop\\AppData\\Local\\Temp',
+  USERDOMAIN: 'DESKTOP-QAI15E1',
+  USERDOMAIN_ROAMINGPROFILE: 'DESKTOP-QAI15E1',
+  USERNAME: 'Laptop',
+  USERPROFILE: 'C:\\Users\\Laptop',
+  VSCODE_GIT_ASKPASS_EXTRA_ARGS: '',
+  VSCODE_GIT_ASKPASS_MAIN: 'c:\\Users\\Laptop\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js',
+  VSCODE_GIT_ASKPASS_NODE: 'C:\\Users\\Laptop\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe',
+  VSCODE_GIT_IPC_HANDLE: '\\\\.\\pipe\\vscode-git-228676796e-sock',
+  VSCODE_INJECTION: '1',
+  windir: 'C:\\Windows'
+}
+[2024-05-04T09:21:39.068] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:21:53.496] [INFO] default - 3000
+[2024-05-04T09:21:53.505] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:22:35.854] [INFO] default - 3001
+[2024-05-04T09:22:35.861] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:22:58.213] [INFO] default - 3001
+[2024-05-04T09:22:58.232] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:23:46.263] [INFO] default - 3001
+[2024-05-04T09:23:46.274] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:23:56.321] [INFO] default - 3001
+[2024-05-04T09:23:56.341] [INFO] default - Hello from TypeScript!
+[2024-05-04T09:23:56.350] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:24:13.961] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:25:38.384] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:26:52.284] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:27:16.453] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:28:11.359] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:28:49.201] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:30:05.605] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:30:20.268] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:33:27.469] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:42:52.568] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:43:57.874] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:49:18.840] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T09:49:18.942] [INFO] default - MongoDB connection successfull! 127.0.0.1
+[2024-05-04T11:04:33.112] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:06:14.893] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:07:35.949] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:07:35.962] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:09:26.046] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:09:26.061] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:10:13.809] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:10:13.822] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:11:24.626] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:11:25.254] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:11:56.786] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:12:38.022] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:12:38.035] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:13:35.018] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:13:35.031] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:15:21.858] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:15:21.877] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:15:41.986] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:15:42.001] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:20:14.770] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:20:14.783] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:21:16.638] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:21:16.655] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:22:19.385] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:22:19.401] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:22:45.353] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:23:51.850] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:25:11.618] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:25:35.532] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:25:51.003] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:26:53.206] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:28:11.665] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:28:34.587] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:30:29.753] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:32:00.582] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:32:54.236] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:33:27.071] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:33:27.084] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:37:40.729] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:37:40.846] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:39:01.700] [INFO] default - job list
+[2024-05-04T11:39:09.541] [INFO] default - list users
+[2024-05-04T11:41:53.253] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:41:53.268] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T11:51:01.902] [INFO] default - MongoDB connect successfull!
+[2024-05-04T11:51:01.925] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T12:55:47.793] [INFO] default - MongoDB connect successfull!
+[2024-05-04T12:55:47.808] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T13:40:51.686] [INFO] default - MongoDB connect successfull!
+[2024-05-04T13:40:51.699] [INFO] default - Server is running at http://localhost:3001
+[2024-05-04T13:42:05.527] [INFO] default - MongoDB connect successfull!
+[2024-05-04T13:42:05.544] [INFO] default - Server is running at http://localhost:3001
+[2024-05-06T10:01:54.854] [INFO] default - Hello from Express and TypeScript!
+[2024-05-06T10:03:24.371] [INFO] default - Hello from Express and TypeScript!
+[2024-05-06T11:37:57.838] [INFO] default - MongoDB Connect!
+[2024-05-06T11:38:14.090] [INFO] default - MongoDB Connect!
+[2024-05-06T12:44:48.957] [INFO] default - MongoDB Connect!
+[2024-05-06T12:45:20.453] [INFO] default - MongoDB Connect!
+[2024-05-06T12:45:45.935] [INFO] default - MongoDB Connect!
+[2024-05-06T12:48:00.447] [INFO] default - MongoDB Connect!
+[2024-05-06T12:48:11.498] [INFO] default - MongoDB Connect!
+[2024-05-06T12:51:30.228] [INFO] default - MongoDB Connect!
+[2024-05-06T12:53:22.754] [INFO] default - MongoDB Connect!
+[2024-05-06T12:54:48.120] [INFO] default - MongoDB Connect!
+[2024-05-06T12:55:04.230] [INFO] default - MongoDB Connect!
+[2024-05-06T12:55:29.188] [INFO] default - MongoDB Connect!
+[2024-05-06T12:55:56.476] [INFO] default - MongoDB Connect!
+[2024-05-06T12:56:50.599] [INFO] default - MongoDB Connect!
+[2024-05-06T12:57:18.775] [INFO] default - MongoDB Connect!
+[2024-05-06T12:57:27.356] [INFO] default - MongoDB Connect!
+[2024-05-06T13:00:52.563] [INFO] default - MongoDB Connect!
+[2024-05-06T13:02:21.109] [INFO] default - MongoDB Connect!
+[2024-05-06T13:03:18.771] [INFO] default - MongoDB Connect!
+[2024-05-06T13:04:34.721] [INFO] default - MongoDB Connect!
+[2024-05-06T13:06:37.568] [INFO] default - MongoDB Connect!
+[2024-05-06T13:07:18.197] [INFO] default - MongoDB Connect!
+[2024-05-06T13:11:16.119] [INFO] default - MongoDB Connect!
+[2024-05-06T13:12:51.966] [INFO] default - MongoDB Connect!
+[2024-05-06T13:13:02.007] [INFO] default - list jobs
+[2024-05-09T10:02:52.208] [INFO] default - MongoDB Connect!
+[2024-05-09T10:03:39.578] [INFO] default - Hello from Express and TypeScript!
+[2024-05-09T10:09:38.250] [INFO] default - MongoDB Connect!
+[2024-05-09T10:09:51.439] [INFO] default - Hello from Express and TypeScript!
+[2024-05-09T10:10:52.285] [INFO] default - list jobs
+[2024-05-09T10:15:13.946] [INFO] default - MongoDB Connect!
+[2024-05-09T10:16:04.327] [INFO] default - MongoDB Connect!
+[2024-05-09T10:16:23.614] [INFO] default - MongoDB Connect!
+[2024-05-09T10:16:44.650] [INFO] default - MongoDB Connect!
+[2024-05-09T10:18:55.664] [INFO] default - new jobs
+[2024-05-09T10:19:20.476] [INFO] default - show jobs
+[2024-05-09T10:20:28.689] [INFO] default - update jobs
+[2024-05-09T10:20:40.112] [INFO] default - delete jobs
+[2024-05-09T10:21:43.039] [INFO] default - MongoDB Connect!
+[2024-05-09T10:22:48.307] [INFO] default - MongoDB Connect!
+[2024-05-09T10:23:09.825] [INFO] default - MongoDB Connect!
+[2024-05-09T10:23:49.425] [INFO] default - MongoDB Connect!
+[2024-05-09T10:24:12.182] [INFO] default - MongoDB Connect!
+[2024-05-09T10:24:29.793] [INFO] default - MongoDB Connect!
+[2024-05-09T10:25:28.581] [INFO] default - MongoDB Connect!
+[2024-05-09T10:26:15.649] [INFO] default - MongoDB Connect!
+[2024-05-09T10:29:26.488] [INFO] default - MongoDB Connect!
+[2024-05-09T10:31:14.809] [INFO] default - MongoDB Connect!
+[2024-05-09T10:31:57.078] [INFO] default - MongoDB Connect!
+[2024-05-09T10:32:31.968] [INFO] default - MongoDB Connect!
+[2024-05-09T10:32:49.976] [INFO] default - MongoDB Connect!
+[2024-05-09T10:38:04.164] [INFO] default - MongoDB Connect!
+[2024-05-09T10:40:16.035] [INFO] default - MongoDB Connect!
+[2024-05-09T10:40:33.946] [INFO] default - Job Request Success
+[2024-05-09T10:42:07.246] [INFO] default - MongoDB Connect!
+[2024-05-09T10:45:19.755] [INFO] default - MongoDB Connect!
+[2024-05-09T10:45:59.014] [INFO] default - MongoDB Connect!
+[2024-05-09T10:49:40.030] [INFO] default - MongoDB Connect!
+[2024-05-09T10:52:54.299] [INFO] default - MongoDB Connect!
+[2024-05-09T10:52:56.759] [INFO] default - Job request successfull
+[2024-05-09T11:01:36.806] [INFO] default - MongoDB Connect!
+[2024-05-09T11:01:49.097] [INFO] default - 1
+[2024-05-09T11:04:07.956] [INFO] default - MongoDB Connect!
+[2024-05-09T11:05:25.962] [INFO] default - {
+  _id: new ObjectId('64e85b2df567470e38af4aab'),
+  title: 'dadasd',
+  description: 'asdadasdadas',
+  company: 'dasdas',
+  location: 'qqqqqqqqqqqqqqq',
+  employment_type: '',
+  salary: 'qqqqqqqqqqqqqqqq',
+  requirements: 'dadasd',
+  responsibilities: 'asdasda',
+  posted_date: 0001-01-01T00:00:00.000Z,
+  expiry_date: 0001-01-01T00:00:00.000Z,
+  contact_information: 'asdasda',
+  application_process: 'dadadas'
+}
+[2024-05-09T11:05:25.979] [INFO] default - 64e85b2df567470e38af4aab
+[2024-05-09T11:07:20.461] [INFO] default - MongoDB Connect!
+[2024-05-09T11:07:28.329] [INFO] default - Show job request
+[2024-05-09T11:07:28.343] [INFO] default - 64e85b2df567470e38af4aab
+[2024-05-09T11:11:43.311] [INFO] default - MongoDB Connect!
+[2024-05-09T11:11:54.409] [INFO] default - MongoDB Connect!
+[2024-05-09T11:14:40.130] [INFO] default - MongoDB Connect!
+[2024-05-09T11:18:31.151] [INFO] default - MongoDB Connect!
+[2024-05-09T11:18:52.161] [INFO] default - MongoDB Connect!
+[2024-05-09T11:19:02.903] [INFO] default - Show request successfull
+[2024-05-09T11:19:02.907] [ERROR] default - Error Occurred: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+[2024-05-09T11:19:17.490] [INFO] default - Show request successfull
+[2024-05-09T11:19:17.492] [ERROR] default - Error Occurred: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+[2024-05-09T11:19:45.734] [INFO] default - MongoDB Connect!
+[2024-05-09T11:19:49.175] [INFO] default - Show request successfull
+[2024-05-09T11:19:49.177] [ERROR] default - Error Occurred: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+[2024-05-09T11:19:51.475] [INFO] default - Show request successfull
+[2024-05-09T11:19:51.477] [ERROR] default - Error Occurred: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+[2024-05-09T11:21:12.443] [INFO] default - MongoDB Connect!
+[2024-05-09T11:21:18.647] [INFO] default - Show request successfull
+[2024-05-09T11:21:18.649] [ERROR] default - Error Occurred: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+[2024-05-09T11:21:47.469] [INFO] default - MongoDB Connect!
+[2024-05-09T11:21:54.456] [INFO] default - Show request successfull
+[2024-05-09T11:30:04.260] [INFO] default - MongoDB Connect!
+[2024-05-09T11:31:58.296] [INFO] default - MongoDB Connect!
+[2024-05-09T11:32:57.879] [INFO] default - MongoDB Connect!
+[2024-05-09T11:37:18.397] [INFO] default - MongoDB Connect!
+[2024-05-09T11:38:18.462] [INFO] default - MongoDB Connect!
+[2024-05-09T11:40:52.371] [INFO] default - MongoDB Connect!
+[2024-05-09T11:41:56.982] [INFO] default - MongoDB Connect!
+[2024-05-09T11:42:05.773] [INFO] default - MongoDB Connect!
+[2024-05-09T11:42:10.043] [INFO] default - MongoDB Connect!
+[2024-05-09T11:43:34.922] [INFO] default - MongoDB Connect!
+[2024-05-09T11:43:58.108] [INFO] default - MongoDB Connect!
+[2024-05-09T11:44:51.236] [INFO] default - MongoDB Connect!
+[2024-05-09T11:45:17.708] [INFO] default - MongoDB Connect!
+[2024-05-09T11:46:01.443] [INFO] default - MongoDB Connect!
+[2024-05-09T11:46:58.049] [INFO] default - MongoDB Connect!
+[2024-05-09T11:47:57.979] [INFO] default - MongoDB Connect!
+[2024-05-09T11:51:41.963] [INFO] default - MongoDB Connect!
+[2024-05-09T11:53:53.453] [INFO] default - MongoDB Connect!
+[2024-05-09T11:54:58.624] [INFO] default - MongoDB Connect!
+[2024-05-09T11:56:17.377] [INFO] default - MongoDB Connect!
+[2024-05-09T11:59:54.947] [INFO] default - MongoDB Connect!
+[2024-05-09T12:01:16.874] [INFO] default - MongoDB Connect!
+[2024-05-09T12:01:47.969] [INFO] default - MongoDB Connect!
+[2024-05-09T14:29:16.519] [INFO] default - MongoDB Connect!
+[2024-05-09T14:32:49.795] [INFO] default - MongoDB Connect!
+[2024-05-09T14:35:58.428] [INFO] default - MongoDB Connect!
+[2024-05-09T14:37:23.406] [INFO] default - MongoDB Connect!
+[2024-05-09T14:40:20.342] [INFO] default - MongoDB Connect!
+[2024-05-09T14:42:18.045] [INFO] default - MongoDB Connect!
+[2024-05-09T14:45:33.286] [INFO] default - MongoDB Connect!
+[2024-05-09T14:47:12.027] [INFO] default - MongoDB Connect!
+[2024-05-09T14:47:43.373] [INFO] default - MongoDB Connect!
+[2024-05-09T15:12:25.873] [INFO] default - MongoDB Connect!
+[2024-05-09T15:12:45.945] [INFO] default - MongoDB Connect!
+[2024-05-09T15:14:51.313] [INFO] default - MongoDB Connect!
+[2024-05-09T15:16:26.935] [INFO] default - MongoDB Connect!
+[2024-05-09T15:18:24.198] [INFO] default - MongoDB Connect!
+[2024-05-09T15:27:06.547] [INFO] default - MongoDB Connect!
+[2024-05-09T15:29:15.612] [INFO] default - MongoDB Connect!
+[2024-05-09T15:32:06.214] [INFO] default - MongoDB Connect!
+[2024-05-09T15:34:44.412] [INFO] default - MongoDB Connect!
+[2024-05-09T15:35:07.364] [INFO] default - MongoDB Connect!
+[2024-05-09T15:42:50.279] [INFO] default - MongoDB Connect!
+[2024-05-09T16:36:49.662] [INFO] default - MongoDB Connect!
+[2024-05-09T16:38:30.019] [INFO] default - MongoDB Connect!
+[2024-05-09T16:38:53.508] [INFO] default - MongoDB Connect!
+[2024-05-09T16:42:04.714] [INFO] default - MongoDB Connect!
+[2024-05-09T16:42:08.978] [INFO] default - MongoDB Connect!
+[2024-05-09T16:42:13.530] [INFO] default - MongoDB Connect!
+[2024-05-09T16:43:00.000] [INFO] default - MongoDB Connect!
+[2024-05-09T16:44:51.759] [INFO] default - MongoDB Connect!
+[2024-05-09T16:48:56.670] [INFO] default - MongoDB Connect!
+[2024-05-09T16:52:49.624] [INFO] default - MongoDB Connect!
+[2024-05-09T16:54:23.475] [INFO] default - MongoDB Connect!
+[2024-05-10T13:02:54.998] [INFO] default - MongoDB Connect!
+[2024-05-10T13:03:16.504] [INFO] default - Hello from Express and TypeScript!
+[2024-05-10T13:03:42.860] [INFO] default - MongoDB Connect!
+[2024-05-10T13:04:29.175] [INFO] default - MongoDB Connect!
+[2024-05-10T13:40:04.290] [INFO] default - MongoDB Connect!
+[2024-05-10T13:42:04.040] [ERROR] default - ERROR - Code: 404 - Message: Example Not Found
+[2024-05-10T13:43:25.575] [INFO] default - MongoDB Connect!
+[2024-05-10T13:44:46.017] [ERROR] default - Error Occurred: Cast to ObjectId failed for value "6630d2ff303f7f74e6a21" (type string) at path "_id" for model "users"
+[2024-05-10T13:45:54.161] [INFO] default - MongoDB Connect!
+[2024-05-10T13:46:21.852] [INFO] default - MongoDB Connect!
+[2024-05-10T13:46:50.565] [INFO] default - MongoDB Connect!
+[2024-05-10T13:48:20.169] [INFO] default - MongoDB Connect!
+[2024-05-10T13:55:02.044] [INFO] default - MongoDB Connect!
+[2024-05-10T13:56:34.076] [INFO] default - MongoDB Connect!
+[2024-05-10T13:57:55.513] [INFO] default - MongoDB Connect!
+[2024-05-10T14:01:23.791] [INFO] default - MongoDB Connect!
+[2024-05-10T14:02:09.081] [INFO] default - MongoDB Connect!
+[2024-05-10T14:02:22.176] [ERROR] default - ERROR - Code: 404 - Message: Users not found
+[2024-05-10T14:03:09.144] [INFO] default - MongoDB Connect!
+[2024-05-10T14:04:39.290] [INFO] default - MongoDB Connect!
+[2024-05-10T14:12:03.989] [INFO] default - MongoDB Connect!
+[2024-05-10T15:19:25.245] [INFO] default - MongoDB Connect!
+[2024-05-10T15:23:00.479] [INFO] default - MongoDB Connect!
+[2024-05-10T15:23:25.016] [INFO] default - MongoDB Connect!
+[2024-05-10T15:27:15.356] [INFO] default - MongoDB Connect!
+[2024-05-10T15:29:44.429] [INFO] default - MongoDB Connect!
+[2024-05-10T15:29:48.428] [INFO] default - MongoDB Connect!
+[2024-05-10T15:30:22.090] [INFO] default - MongoDB Connect!
+[2024-05-10T15:30:47.701] [INFO] default - MongoDB Connect!
+[2024-05-10T15:33:53.867] [INFO] default - MongoDB Connect!
+[2024-05-10T15:39:06.889] [INFO] default - MongoDB Connect!
+[2024-05-10T15:47:10.539] [INFO] default - MongoDB Connect!
+[2024-05-10T15:47:19.965] [ERROR] default - ERROR - Code: 404 - Message: Example Not Found
+[2024-05-10T15:50:01.622] [INFO] default - MongoDB Connect!
+[2024-05-10T15:52:14.362] [INFO] default - MongoDB Connect!
+[2024-05-10T15:53:24.296] [INFO] default - MongoDB Connect!
+[2024-05-10T15:54:46.675] [INFO] default - MongoDB Connect!
+[2024-05-10T15:56:35.190] [INFO] default - MongoDB Connect!
+[2024-05-10T15:57:00.540] [INFO] default - MongoDB Connect!
+[2024-05-10T15:57:47.590] [INFO] default - MongoDB Connect!
+[2024-05-10T15:58:59.820] [INFO] default - MongoDB Connect!
+[2024-05-10T16:04:17.213] [INFO] default - MongoDB Connect!
+[2024-05-10T16:04:56.512] [ERROR] default - ERROR - Code: 404 - Message: Example Not Found
+[2024-05-10T16:05:02.967] [INFO] default - Hello from Express and TypeScript!

@@ -1,9 +1,10 @@
 import DOMPurify from "dompurify";
 import { NextFunction, Request, Response } from "express";
+import { ISanitizeRequests } from "../../types";
 
 
-class SanitizeRequests {
-  async sanitizeRequestBody(req: Request, res: Response, next: NextFunction) {
+class SanitizeRequests implements ISanitizeRequests {
+  async sanitizeRequestBody(req: Request, res: Response, next: NextFunction): Promise<void> {
     if(req.body && typeof req.body === 'object') {
       Object.keys(req.body).forEach((key) => {
         if(typeof req.body[key] === 'string') {

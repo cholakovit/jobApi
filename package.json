@@ -11,6 +11,7 @@
   "author": "cholakovit",
   "license": "ISC",
   "dependencies": {
+    "argon2": "^0.40.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "compression": "^1.7.4",
@@ -30,6 +31,7 @@
     "nodemon": "^3.1.0"
   },
   "devDependencies": {
+    "@types/argon2": "^0.15.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/compression": "^1.7.5",
     "@types/cookie-parser": "^1.4.7",

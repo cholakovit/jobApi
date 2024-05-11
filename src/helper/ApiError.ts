@@ -1,4 +1,6 @@
-class ApiError extends Error {
+import { IApiError } from "../../types"
+
+class ApiError extends Error implements IApiError {
   statusCode: number
   status: string
 

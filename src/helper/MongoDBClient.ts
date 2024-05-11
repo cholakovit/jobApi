@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 import logger from "./logger";
+import { IMongoDBClient } from "../../types";
 
-class MongoDBClient {
-  async connectMongoDB() {
+class MongoDBClient implements IMongoDBClient {
+  async connectMongoDB(): Promise<void> {
     try {
       const conn = await mongoose.connect(process.env.MONGO_URI!)
       logger.info(`MongoDB Connect!`)

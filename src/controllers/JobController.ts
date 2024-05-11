@@ -2,9 +2,10 @@ import { NextFunction, Request, Response } from "express";
 import jobsSchema from "../schemas/jobsSchema";
 import { StatusCodes } from "http-status-codes";
 import ApiError from "../helper/ApiError";
+import { IJobController } from "../../types";
 
-class JobController {
-  async listJobs(req: Request, res: Response, next: NextFunction) {
+class JobController implements IJobController {
+  listJobs = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const jobs = await jobsSchema.find()
       if(jobs.length === 0) {
@@ -16,7 +17,7 @@ class JobController {
     }
   }
 
-  async newJob(req: Request, res: Response, next: NextFunction) {
+  newJob = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const job = await jobsSchema.create(req.body)
       res.status(StatusCodes.CREATED).json({ job })
@@ -25,7 +26,7 @@ class JobController {
     }
   }
 
-  async showJob(req: Request, res: Response, next: NextFunction) {
+  showJob = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     const { id } = req.params
     try {
       const job = await jobsSchema.findById(id)
@@ -38,7 +39,7 @@ class JobController {
     }
   }
 
-  async updateJob(req: Request, res: Response, next: NextFunction) {
+  updateJob = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const job = await jobsSchema.findByIdAndUpdate(req.params.id, req.body, { new: true })
       if(!job) {
@@ -51,7 +52,7 @@ class JobController {
   }
 
 
-  async deleteJob(req: Request, res: Response, next: NextFunction) {
+  deleteJob = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const job = await jobsSchema.findByIdAndDelete(req.params.id)
       if(!job) {

@@ -3,9 +3,10 @@ import logger from "../helper/logger";
 import usersSchema from "../schemas/usersSchema";
 import { StatusCodes } from "http-status-codes";
 import ApiError from "../helper/ApiError";
+import { IUserController } from "../../types";
 
-class UserController {
-  async listUser(req: Request, res: Response, next: NextFunction) {
+class UserController implements IUserController {
+  listUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const users = await usersSchema.find()
       if(users.length === 0) {
@@ -16,7 +17,7 @@ class UserController {
       next(new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred: ${(error as Error).message}`));
     }
   }
-  async newUser(req: Request, res: Response, next: NextFunction) {
+  newUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const user = await usersSchema.create(req.body)
       res.status(StatusCodes.CREATED).json({ user })
@@ -24,7 +25,7 @@ class UserController {
       next(new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred: ${(error as Error).message}`));
     }
   }
-  async showUser(req: Request, res: Response, next: NextFunction) {
+  showUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const user = await usersSchema.findById(req.params.id)
       if(!user) {
@@ -36,7 +37,7 @@ class UserController {
       next(new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred: ${(error as Error).message}`));
     }
   }
-  async updateUser(req: Request, res: Response, next: NextFunction) {
+  updateUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const user = await usersSchema.findByIdAndUpdate(req.params.id, req.body, { new: true })
       if(!user) {
@@ -47,7 +48,7 @@ class UserController {
       next(new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred: ${(error as Error).message}`));
     }
   }
-  async deleteUser(req: Request, res: Response, next: NextFunction) {
+  deleteUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const user = await usersSchema.findByIdAndDelete(req.params.id, req.body)
       if(!user) {

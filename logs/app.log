@@ -395,3 +395,49 @@
 [2024-05-10T16:04:17.213] [INFO] default - MongoDB Connect!
 [2024-05-10T16:04:56.512] [ERROR] default - ERROR - Code: 404 - Message: Example Not Found
 [2024-05-10T16:05:02.967] [INFO] default - Hello from Express and TypeScript!
+[2024-05-11T10:12:29.166] [INFO] default - MongoDB Connect!
+[2024-05-11T10:28:09.462] [INFO] default - MongoDB Connect!
+[2024-05-11T10:30:59.285] [INFO] default - MongoDB Connect!
+[2024-05-11T10:34:22.073] [INFO] default - MongoDB Connect!
+[2024-05-11T10:38:15.063] [INFO] default - MongoDB Connect!
+[2024-05-11T10:38:36.884] [INFO] default - MongoDB Connect!
+[2024-05-11T10:39:50.690] [INFO] default - MongoDB Connect!
+[2024-05-11T10:40:57.999] [INFO] default - MongoDB Connect!
+[2024-05-11T10:41:40.745] [INFO] default - MongoDB Connect!
+[2024-05-11T10:46:06.839] [INFO] default - MongoDB Connect!
+[2024-05-11T10:50:23.143] [INFO] default - MongoDB Connect!
+[2024-05-11T10:51:11.489] [INFO] default - MongoDB Connect!
+[2024-05-11T10:53:23.959] [INFO] default - MongoDB Connect!
+[2024-05-11T11:11:22.878] [INFO] default - MongoDB Connect!
+[2024-05-11T11:11:48.519] [INFO] default - MongoDB Connect!
+[2024-05-11T11:15:28.449] [INFO] default - MongoDB Connect!
+[2024-05-11T11:36:23.704] [INFO] default - MongoDB Connect!
+[2024-05-11T11:38:22.147] [INFO] default - MongoDB Connect!
+[2024-05-11T11:45:20.874] [INFO] default - MongoDB Connect!
+[2024-05-11T11:45:45.883] [INFO] default - MongoDB Connect!
+[2024-05-11T11:51:11.587] [INFO] default - MongoDB Connect!
+[2024-05-11T11:51:49.151] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred during register: Cannot read properties of undefined (reading 'hashPassword')
+[2024-05-11T11:55:05.185] [INFO] default - MongoDB Connect!
+[2024-05-11T11:55:12.096] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred during register: Cannot read properties of undefined (reading 'hashPassword')
+[2024-05-11T11:55:19.223] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred during register: Cannot read properties of undefined (reading 'hashPassword')
+[2024-05-11T11:56:26.412] [INFO] default - MongoDB Connect!
+[2024-05-11T12:01:05.275] [INFO] default - MongoDB Connect!
+[2024-05-11T12:02:56.605] [INFO] default - MongoDB Connect!
+[2024-05-11T12:03:27.109] [ERROR] default - ERROR - Code: 400 - Message: Username already exists.
+[2024-05-11T12:04:02.034] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred during login: Cannot read properties of undefined (reading 'verifyUsers')
+[2024-05-11T12:04:50.448] [INFO] default - MongoDB Connect!
+[2024-05-11T12:05:19.605] [INFO] default - MongoDB Connect!
+[2024-05-11T12:08:22.141] [INFO] default - MongoDB Connect!
+[2024-05-11T12:08:27.275] [INFO] default - MongoDB Connect!
+[2024-05-11T12:08:58.054] [INFO] default - MongoDB Connect!
+[2024-05-11T12:59:31.048] [INFO] default - MongoDB Connect!
+[2024-05-11T13:05:58.164] [INFO] default - MongoDB Connect!
+[2024-05-11T13:25:43.568] [INFO] default - MongoDB Connect!
+[2024-05-11T13:26:34.040] [INFO] default - MongoDB Connect!
+[2024-05-11T13:27:26.216] [INFO] default - MongoDB Connect!
+[2024-05-11T13:33:25.727] [INFO] default - MongoDB Connect!
+[2024-05-11T13:36:23.933] [INFO] default - MongoDB Connect!
+[2024-05-11T13:36:52.800] [INFO] default - MongoDB Connect!
+[2024-05-11T13:38:43.491] [INFO] default - MongoDB Connect!
+[2024-05-11T13:43:21.184] [INFO] default - MongoDB Connect!
+[2024-05-11T13:43:58.906] [INFO] default - MongoDB Connect!

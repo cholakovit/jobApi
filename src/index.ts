@@ -8,6 +8,7 @@ import MongoDBClient from './helper/MongoDBClient'
 import rateLimit from 'express-rate-limit'
 import jobRouter from './routers/jobRouter'
 import userRouter from './routers/userRouter'
+import authRouter from './routers/authRouter'
 import ErrorHandler from './middleware/errorHandler'
 import ApiError from './helper/ApiError'
 
@@ -41,6 +42,7 @@ app.get('/', (req: Request, res: Response) => {
 
 app.use('/jobs', jobRouter)
 app.use('/users', userRouter)
+app.use('/', authRouter)
 
 app.get('/example', (req: Request, res: Response, next: NextFunction) => {
   try {

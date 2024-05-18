@@ -3,8 +3,9 @@ import * as argon2 from "argon2";
 import ApiError from "../helper/ApiError";
 import { StatusCodes } from "http-status-codes";
 import usersSchema from "../schemas/usersSchema";
-import { IAuthController } from "../../types";
-
+import { IAuthController, IUser } from "../../types";
+import jwt from 'jsonwebtoken'
+import AuthMiddleware from "../middleware/Authentication";
 
 class AuthController implements IAuthController {
   private hashOptions = {
@@ -16,14 +17,38 @@ class AuthController implements IAuthController {
 
   login = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const result = await this.verifyUsers(req.body.username, req.body.password)
-      if(result === true) {
-        res.status(StatusCodes.OK).send({ result })
+      const user = await this.verifyUsers(req.body.username, req.body.password)
+      if(user) {
+
+        const token = jwt.sign(
+          { username: user.username, id: user._id },
+          process.env.JWT_SECRET!,
+          { expiresIn: '1h' }
+        );
+
+        res.status(StatusCodes.OK).send({ user, token })
       } else {
         return next(new ApiError(StatusCodes.NOT_FOUND, 'User not found'));
       }
     } catch(error) {
       next(new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred during login: ${(error as Error).message}`));
+    }
+  }
+
+  logout = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const authHeader = req.headers.authorization
+    if(authHeader) {
+      const token = authHeader.split(' ')[1]
+      const authMiddleware = new AuthMiddleware()
+      //const authMiddleware = AuthMiddleware.getInstance();
+      
+      authMiddleware.addToBlackList(token)
+
+      console.log(authMiddleware.isTokenBlacklisted(token))
+
+      res.status(StatusCodes.OK).send({ message: 'Logout Successfully!' })
+    } else {
+      next(new ApiError(StatusCodes.UNAUTHORIZED, 'Authorization header missing'))
     }
   }
 
@@ -45,7 +70,7 @@ class AuthController implements IAuthController {
     }
   }
 
-  private verifyUsers = async (username: string, password: string): Promise<boolean> => {
+  private verifyUsers = async (username: string, password: string): Promise<IUser> => {
     try {
       const user = await usersSchema.findOne({ username }).exec()
       if(!user || user.password == null) {
@@ -55,7 +80,7 @@ class AuthController implements IAuthController {
       if(!validPassword) {
         throw new ApiError(StatusCodes.UNAUTHORIZED, 'Invalid Password!');
       }
-      return true;
+      return user;
     } catch(error) {
       throw new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred during verifing users: ${(error as Error).message}`);
     }

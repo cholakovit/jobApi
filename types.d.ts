@@ -1,8 +1,18 @@
 import { NextFunction, Request } from "express";
 
+declare global {
+  namespace Express {
+    interface Request {
+      user?: any
+    }
+  }
+}
+
+
 interface IAuthController {
   login(req: Request, res: Response<any, Record<string, any>>, next: NextFunction): Promise<void>;
   register(req: Request, res: Response<any, Record<string, any>>, next: NextFunction): Promise<void>;
+  logout(req: Request, res: Response<any, Record<string, any>>, next: NextFunction): Promise<void>;
 }
 
 interface IJobController {
@@ -21,6 +31,12 @@ interface IUserController {
   deleteUser(req: Request, res: Response<any, Record<string, any>>, next: NextFunction): Promise<void>;
 }
 
+interface IAuthMiddleware {
+  authenticateJWT(req: Request, res: Response<any, Record<string, any>>, next: NextFunction): void;
+  addToBlackList(token: string): void;
+  isTokenBlacklisted(token: string): boolean;
+}
+
 interface IApiError {
   statusCode: number;
   status: string;
@@ -33,4 +49,11 @@ interface IMongoDBClient {
 
 interface ISanitizeRequests {
   sanitizeRequestBody(req: Request, res: Response<any, Record<string, any>>, next: NextFunction): Promise<void>;
+}
+
+interface IUser {
+  username: string;
+  password: string;
+  roles?: string | null;
+  _id: string; // or ObjectId, depending on your setup
 }

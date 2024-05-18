@@ -1,4 +1,5 @@
 import express, { Application, NextFunction, Request, Response } from 'express'
+import compression from 'compression'
 import dotenv from 'dotenv'
 import logger from './helper/logger'
 import helmet from 'helmet'
@@ -17,7 +18,7 @@ const app: Application = express()
 const sanitizeRequests = new SanitizeRequests()
 const mongoDBClient = new MongoDBClient()
 
-
+app.use(compression())
 app.use(helmet())
 app.use(sanitizeRequests.sanitizeRequestBody)
 app.use(express.json())

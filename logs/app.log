@@ -510,3 +510,22 @@
 [2024-05-18T16:04:13.360] [ERROR] default - ERROR - Code: 403 - Message: Token has been blacklisted
 [2024-05-18T16:08:55.163] [INFO] default - MongoDB Connect!
 [2024-05-18T18:02:05.409] [INFO] default - MongoDB Connect!
+[2024-05-19T16:59:47.619] [INFO] default - MongoDB Connect!
+[2024-05-19T17:00:36.840] [INFO] default - MongoDB Connect!
+[2024-05-19T17:02:19.909] [INFO] default - MongoDB Connect!
+[2024-05-19T17:02:49.318] [ERROR] default - ERROR - Code: 403 - Message: Invalid token
+[2024-05-19T17:02:58.313] [ERROR] default - ERROR - Code: 401 - Message: Authorization header missing
+[2024-05-19T17:14:44.103] [INFO] default - MongoDB Connect!
+[2024-05-19T17:21:24.534] [INFO] default - MongoDB Connect!
+[2024-05-19T17:27:55.856] [INFO] default - MongoDB Connect!
+[2024-05-19T17:33:04.778] [INFO] default - MongoDB Connect!
+[2024-05-19T17:35:47.331] [INFO] default - MongoDB Connect!
+[2024-05-19T17:37:25.259] [INFO] default - MongoDB Connect!
+[2024-05-19T17:37:49.165] [INFO] default - MongoDB Connect!
+[2024-05-19T17:38:13.697] [ERROR] default - ERROR - Code: 401 - Message: No token provided
+[2024-05-19T17:41:48.528] [INFO] default - MongoDB Connect!
+[2024-05-19T17:43:32.009] [INFO] default - MongoDB Connect!
+[2024-05-19T17:46:56.278] [INFO] default - MongoDB Connect!
+[2024-05-19T17:48:02.448] [INFO] default - MongoDB Connect!
+[2024-05-19T17:48:53.077] [INFO] default - MongoDB Connect!
+[2024-05-19T17:52:09.751] [INFO] default - MongoDB Connect!

@@ -54,6 +54,6 @@ interface ISanitizeRequests {
 interface IUser {
   username: string;
   password: string;
-  roles?: string | null;
+  role?: string | null;
   _id: string; // or ObjectId, depending on your setup
 }

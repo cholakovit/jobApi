@@ -17,11 +17,10 @@ class AuthController implements IAuthController {
 
   login = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const user = await this.verifyUsers(req.body.username, req.body.password)
-      if(user) {
-
+      const user: IUser = await this.verifyUsers(req.body.username, req.body.password)
+      if (user) {
         const token = jwt.sign(
-          { username: user.username, id: user._id },
+          { username: user.username, id: user._id, role: user.role }, 
           process.env.JWT_SECRET!,
           { expiresIn: '1h' }
         );
@@ -61,7 +60,8 @@ class AuthController implements IAuthController {
       const hashPassword: string = await this.hashPassword(req.body.password)
       const newUser = new usersSchema({
         username: req.body.username,
-        password: hashPassword
+        password: hashPassword,
+        role: req.body.role
       })
       await newUser.save()
       res.status(StatusCodes.CREATED).json({ newUser })

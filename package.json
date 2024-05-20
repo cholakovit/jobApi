@@ -17,7 +17,7 @@
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dompurify": "^3.1.2",
+    "dompurify": "^3.1.4",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-rate-limit": "^7.2.0",
@@ -27,7 +27,7 @@
     "jsdom": "^24.0.0",
     "jsonwebtoken": "^9.0.2",
     "log4js": "^6.9.1",
-    "mongoose": "^8.3.2",
+    "mongoose": "^8.4.0",
     "nodemon": "^3.1.0"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "@types/express-rate-limit": "^6.0.0",
     "@types/jsdom": "^21.1.6",
     "@types/jsonwebtoken": "^9.0.6",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.12",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }

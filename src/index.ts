@@ -13,6 +13,7 @@ import authRouter from './routers/authRouter';
 import ErrorHandler from './middleware/errorHandler';
 import ApiError from './helper/ApiError';
 import csurf from 'csurf';
+import { cspOptions, corsOptions } from './helper/constants';
 
 dotenv.config();
 const app: Application = express();
@@ -20,14 +21,28 @@ const sanitizeRequests = new SanitizeRequests();
 const mongoDBClient = new MongoDBClient();
 
 app.use(compression());
+
+// Middleware to enforce HTTPS
+function enforceHttps(req: Request, res: Response, next: NextFunction) {
+  if (req.secure || req.headers['x-forwarded-proto'] === 'https') {
+    return next();
+  }
+  res.redirect(`https://${req.headers.host}${req.url}`);
+}
+app.use(enforceHttps);
+
 app.use(helmet());
+
+// Extend Helmet to configure X-Frame-Options to prevent clickjacking
+app.use(helmet.frameguard({ action: 'deny' }));
+
+// Use Helmet to set the Content Security Policy
+app.use(helmet.contentSecurityPolicy(cspOptions));
+
 app.use(sanitizeRequests.sanitizeRequestBody);
 app.use(express.json());
 
-app.use(cors({
-  origin: 'http://localhost:5173',  // Only allow this origin to access your API
-  credentials: true  // Allow credentials (cookies)
-}));
+app.use(cors(corsOptions));
 
 app.set('trust proxy', 1);
 
@@ -47,7 +62,7 @@ const csrfProtection = csurf({
 });
 
 // Apply CSRF middleware
-app.use(csrfProtection);
+ app.use(csrfProtection);
 
 // Middleware to set a CSRF token cookie for every request
 app.use((req: Request, res: Response, next: NextFunction) => {

@@ -14,6 +14,7 @@ import ErrorHandler from './middleware/errorHandler';
 import ApiError from './helper/ApiError';
 import csurf from 'csurf';
 import { cspOptions, corsOptions } from './helper/constants';
+import promBundle from 'express-prom-bundle';
 
 dotenv.config();
 const app: Application = express();
@@ -22,12 +23,23 @@ const mongoDBClient = new MongoDBClient();
 
 app.use(compression());
 
+// Define the metrics middleware
+const metricsMiddleware = promBundle({
+  includeMethod: true,
+  includePath: true,
+  includeUp: true,
+  customLabels: { project_name: 'jobApi', project_type: 'api' },
+  promClient: {
+    collectDefaultMetrics: {},
+  },
+});
+
 // Middleware to enforce HTTPS
 function enforceHttps(req: Request, res: Response, next: NextFunction) {
   if (req.secure || req.headers['x-forwarded-proto'] === 'https') {
     return next();
   }
-  res.redirect(`https://${req.headers.host}${req.url}`);
+  const url = new URL(`https://req.headers.host}${req.url}`);
 }
 app.use(enforceHttps);
 
@@ -62,14 +74,17 @@ const csrfProtection = csurf({
 });
 
 // Apply CSRF middleware
- app.use(csrfProtection);
+app.use(csrfProtection);
 
-// Middleware to set a CSRF token cookie for every request
+//Middleware to set a CSRF token cookie for every request
 app.use((req: Request, res: Response, next: NextFunction) => {
   const csrfToken = req.csrfToken();
   res.cookie('XSRF-TOKEN', csrfToken, { httpOnly: false }); // Accessible by client-side JS
   next();
 });
+
+// Use the metrics middleware in your application
+app.use(metricsMiddleware);
 
 app.get('/', (req: Request, res: Response) => {
   logger.info(`Hello from Express and TypeScript!`);

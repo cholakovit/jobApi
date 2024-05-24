@@ -51,9 +51,18 @@ interface ISanitizeRequests {
   sanitizeRequestBody(req: Request, res: Response<any, Record<string, any>>, next: NextFunction): Promise<void>;
 }
 
-interface IUser {
+export interface IUser extends Document {
   username: string;
   password: string;
-  role?: string | null;
-  _id: string; // or ObjectId, depending on your setup
+  email: string;
+  firstName?: string;
+  lastName?: string;
+  dateOfBirth?: Date;
+  gender?: 'Male' | 'Female' | 'Other';
+  profilePicture?: string;
+  bio?: string;
+  role: 'User' | 'Admin';
+  createdAt: Date;
+  updatedAt: Date;
+  isActive: boolean;
 }

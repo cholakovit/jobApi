@@ -1,20 +1,15 @@
-import express, { Application, NextFunction, Request, Response } from 'express';
+import express, { Application } from 'express';
 import compression from 'compression';
 import dotenv from 'dotenv';
-import logger from './helper/logger';
 import helmet from 'helmet';
 import cors from 'cors';
 import SanitizeRequests from './middleware/SanitizeRequests';
 import MongoDBClient from './helper/MongoDBClient';
-import rateLimit from 'express-rate-limit';
 import jobRouter from './routers/jobRouter';
 import userRouter from './routers/userRouter';
 import authRouter from './routers/authRouter';
 import ErrorHandler from './middleware/errorHandler';
-import ApiError from './helper/ApiError';
-import csurf from 'csurf';
-import { cspOptions, corsOptions } from './helper/constants';
-import promBundle from 'express-prom-bundle';
+import { cspOptions, corsOptions, csrfProtection, limiter, metricsMiddleware, enforceHttps, csrfTokenCookie } from './helper/settings';
 
 dotenv.config();
 const app: Application = express();
@@ -23,86 +18,47 @@ const mongoDBClient = new MongoDBClient();
 
 app.use(compression());
 
-// Define the metrics middleware
-const metricsMiddleware = promBundle({
-  includeMethod: true,
-  includePath: true,
-  includeUp: true,
-  customLabels: { project_name: 'jobApi', project_type: 'api' },
-  promClient: {
-    collectDefaultMetrics: {},
-  },
-});
+// Ensures that all incoming requests are redirected to HTTPS, enhancing the security 
+// of the application by enforcing secure communication. --
+//app.use(enforceHttps);
 
-// Middleware to enforce HTTPS
-function enforceHttps(req: Request, res: Response, next: NextFunction) {
-  if (req.secure || req.headers['x-forwarded-proto'] === 'https') {
-    return next();
-  }
-  const url = new URL(`https://req.headers.host}${req.url}`);
-}
-app.use(enforceHttps);
-
+// Helmet helps secure the app by setting various HTTP headers, protecting against common web 
+// vulnerabilities like cross-site scripting (XSS), content security policy violations, and other attacks.
 app.use(helmet());
 
 // Extend Helmet to configure X-Frame-Options to prevent clickjacking
 app.use(helmet.frameguard({ action: 'deny' }));
 
-// Use Helmet to set the Content Security Policy
+// Helmet's content security policy with the provided options to enhance security by defining allowed content sources.
 app.use(helmet.contentSecurityPolicy(cspOptions));
 
+// Sanitizes the body of incoming requests. By doing this, it helps to prevent injection attacks 
+// and ensures that the data received in the request body is clean and safe to use.
 app.use(sanitizeRequests.sanitizeRequestBody);
 app.use(express.json());
 
+// Enable Cross-Origin Resource Sharing (CORS).
 app.use(cors(corsOptions));
 
 app.set('trust proxy', 1);
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 mins
-  max: 100 // limit each IP to 100 requests per windowMs
-});
+// apply rate limiting middleware to all routes, which helps to control the number of 
+// requests a client can make to the server within a certain time frame.
 app.use(limiter);
 
-// CSRF protection middleware
-const csrfProtection = csurf({
-  cookie: {
-    httpOnly: true,
-    secure: false, // Set to false for development
-    sameSite: 'strict',
-  },
-});
+// Helps to protect the application from CSRF attacks by ensuring that requests 
+// made to the server are from authenticated and trusted sources. --
+//app.use(csrfProtection);
 
-// Apply CSRF middleware
-app.use(csrfProtection);
+// Ensures that each request is protected against CSRF attacks by including a CSRF token in cookies. --
+//app.use(csrfTokenCookie);
 
-//Middleware to set a CSRF token cookie for every request
-app.use((req: Request, res: Response, next: NextFunction) => {
-  const csrfToken = req.csrfToken();
-  res.cookie('XSRF-TOKEN', csrfToken, { httpOnly: false }); // Accessible by client-side JS
-  next();
-});
-
-// Use the metrics middleware in your application
+// For all incoming requests, allowing the application to gather performance metrics.
 app.use(metricsMiddleware);
-
-app.get('/', (req: Request, res: Response) => {
-  logger.info(`Hello from Express and TypeScript!`);
-  res.send(`Hello from Express and TypeScript!`);
-});
 
 app.use('/jobs', jobRouter);
 app.use('/users', userRouter);
 app.use('/', authRouter);
-
-app.get('/example', (req: Request, res: Response, next: NextFunction) => {
-  try {
-    // some logic
-    throw new ApiError(404, 'Example Not Found');
-  } catch (error) {
-    next(error);
-  }
-});
 
 app.use(ErrorHandler.errorHandler);
 

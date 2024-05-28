@@ -1,10 +1,7 @@
 import mongoose from "mongoose";
+import { IJob } from "../../types";
 
 const jobsSchema = new mongoose.Schema({
-  _id: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true
-  },
   title: {
     type: String,
     required: true
@@ -52,4 +49,4 @@ const jobsSchema = new mongoose.Schema({
   }
 })
 
-export default mongoose.model('jobs', jobsSchema)
+export default mongoose.model<IJob>('jobs', jobsSchema)

@@ -52,7 +52,7 @@ interface ISanitizeRequests {
 }
 
 export interface IUser extends Document {
-  _id: string;
+  _id?: string;
   username: string;
   password: string;
   email: string;
@@ -66,4 +66,29 @@ export interface IUser extends Document {
   createdAt: Date;
   updatedAt: Date;
   isActive: boolean;
+}
+
+export interface IJob extends Document {
+  title: string;
+  description: string;
+  company?: string;
+  location?: string;
+  employment_type?: string;
+  salary?: string;
+  requirements?: string;
+  responsibilities?: string;
+  post_date: Date;
+  expiry_date?: Date;
+  contact_information?: string;
+  application_process?: string;
+  posted_by: mongoose.Schema.Types.ObjectId;
+}
+
+export interface ITag extends Document {
+  name: string;
+}
+
+export interface IJobTag extends Document {
+  jobId: mongoose.Schema.Types.ObjectId;
+  tagId: mongoose.Schema.Types.ObjectId;
 }

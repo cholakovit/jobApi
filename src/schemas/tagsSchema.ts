@@ -1,14 +1,11 @@
 import mongoose from "mongoose";
+import { ITag } from "../../types";
 
 const tagsSchema = new mongoose.Schema({
-  _id: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true
-  },
   tag: {
     type: String,
     required: true
   }
 })
 
-export default mongoose.model('tags', tagsSchema)
+export default mongoose.model<ITag>('tags', tagsSchema)

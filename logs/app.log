@@ -634,3 +634,49 @@
 [2024-05-27T20:43:54.444] [INFO] default - MongoDB Connect!
 [2024-05-27T20:44:07.655] [INFO] default - MongoDB Connect!
 [2024-05-27T20:48:00.051] [INFO] default - MongoDB Connect!
+[2024-05-28T12:55:21.304] [INFO] default - MongoDB Connect!
+[2024-05-28T13:00:33.875] [INFO] default - MongoDB Connect!
+[2024-05-28T13:01:23.653] [INFO] default - MongoDB Connect!
+[2024-05-28T13:03:33.063] [INFO] default - MongoDB Connect!
+[2024-05-28T13:06:57.152] [INFO] default - MongoDB Connect!
+[2024-05-28T13:09:37.205] [INFO] default - MongoDB Connect!
+[2024-05-28T13:10:16.339] [INFO] default - MongoDB Connect!
+[2024-05-28T13:11:09.170] [INFO] default - MongoDB Connect!
+[2024-05-28T13:13:26.286] [INFO] default - MongoDB Connect!
+[2024-05-28T13:13:53.438] [ERROR] default - ERROR - Code: 500 - Message: misconfigured csrf
+[2024-05-28T13:14:41.131] [INFO] default - MongoDB Connect!
+[2024-05-28T13:15:21.179] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: jobs validation failed: posted_by: Path `posted_by` is required., _id: Path `_id` is required.
+[2024-05-28T13:16:08.031] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: jobs validation failed: _id: Path `_id` is required.
+[2024-05-28T13:16:53.455] [INFO] default - MongoDB Connect!
+[2024-05-28T13:16:59.534] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: document must have an _id before saving
+[2024-05-28T13:19:59.353] [INFO] default - MongoDB Connect!
+[2024-05-28T13:20:07.720] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: document must have an _id before saving
+[2024-05-28T13:20:09.749] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: document must have an _id before saving
+[2024-05-28T13:23:06.608] [INFO] default - MongoDB Connect!
+[2024-05-28T13:26:34.857] [INFO] default - MongoDB Connect!
+[2024-05-28T13:34:56.421] [INFO] default - MongoDB Connect!
+[2024-05-28T13:36:30.340] [INFO] default - MongoDB Connect!
+[2024-05-28T13:45:37.361] [INFO] default - MongoDB Connect!
+[2024-05-28T13:47:06.063] [INFO] default - MongoDB Connect!
+[2024-05-28T13:47:10.990] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Transaction numbers are only allowed on a replica set member or mongos
+[2024-05-28T13:48:13.809] [INFO] default - MongoDB Connect!
+[2024-05-28T13:48:18.210] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Transaction numbers are only allowed on a replica set member or mongos
+[2024-05-28T14:04:01.801] [INFO] default - MongoDB Connect!
+[2024-05-28T14:07:49.795] [INFO] default - MongoDB Connect!
+[2024-05-28T14:09:34.270] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: jobTags validation failed: tagId: Cast to ObjectId failed for value "tagId1" (type string) at path "tagId" because of "BSONError"
+[2024-05-28T14:12:52.700] [INFO] default - MongoDB Connect!
+[2024-05-28T14:13:04.207] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+[2024-05-28T14:15:59.745] [INFO] default - MongoDB Connect!
+[2024-05-28T14:16:09.542] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Invalid tagId: tagId1
+[2024-05-28T14:23:33.644] [INFO] default - MongoDB Connect!
+[2024-05-28T14:23:39.376] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Invalid tagId: tagId1
+[2024-05-28T14:23:43.370] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Invalid tagId: tagId1
+[2024-05-28T14:30:24.993] [INFO] default - MongoDB Connect!
+[2024-05-28T14:46:59.770] [INFO] default - MongoDB Connect!
+[2024-05-28T14:47:43.055] [INFO] default - MongoDB Connect!
+[2024-05-28T14:49:25.511] [INFO] default - MongoDB Connect!
+[2024-05-28T14:49:46.123] [INFO] default - MongoDB Connect!
+[2024-05-28T14:55:34.208] [INFO] default - MongoDB Connect!
+[2024-05-28T15:06:36.910] [INFO] default - MongoDB Connect!
+[2024-05-28T15:11:57.198] [INFO] default - MongoDB Connect!
+[2024-05-28T15:12:51.190] [INFO] default - MongoDB Connect!

@@ -1,10 +1,7 @@
 import mongoose from "mongoose";
+import { IJobTag } from "../../types";
 
 const jobTagsSchema = new mongoose.Schema({
-  _id: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true
-  },
   jobId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'jobs',
@@ -17,4 +14,4 @@ const jobTagsSchema = new mongoose.Schema({
   }
 })
 
-export default mongoose.model('jobTags', jobTagsSchema)
+export default mongoose.model<IJobTag>('jobTags', jobTagsSchema)

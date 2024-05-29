@@ -85,7 +85,8 @@ export interface IJob extends Document {
 }
 
 export interface ITag extends Document {
-  name: string;
+  _id?: ObjectId;
+  tag: string;
 }
 
 export interface IJobTag extends Document {

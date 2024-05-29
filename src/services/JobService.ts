@@ -1,9 +1,10 @@
-import mongoose from "mongoose";
+import mongoose, { Document, ObjectId } from "mongoose";
 import jobsSchema from "../schemas/jobsSchema";
 import tagsSchema from "../schemas/tagsSchema";
 import jobTagsSchema from "../schemas/jobTagsSchema";
 import ApiError from "../helper/ApiError";
 import { StatusCodes } from "http-status-codes";
+import { ITag } from "../../types";
 
 
 class JobService {
@@ -29,19 +30,24 @@ class JobService {
     return !!replicaSet;
   }
 
-  static async findOrCreateTags(tags: string[]): Promise<mongoose.Types.ObjectId[]> {
-    return Promise.all(tags.map(async (tagName: string) => {
-      let tag = await tagsSchema.findOne({ tag: tagName });
-      if (!tag) {
-        tag = await tagsSchema.create({ tag: tagName });
-      }
-      return tag._id;
-    }));
+  static async findOrCreateTags(tags: string[]): Promise<ObjectId[]> {
+    const existingTags = await tagsSchema.find({ tag: { $in: tags } }).select('_id tag');
+  
+    const existingTagNames = new Set(existingTags.map(tag => tag.tag));
+  
+    const newTagNames = tags.filter(tagName => !existingTagNames.has(tagName));
+  
+    let insertedTags: ITag[] = [];
+    if (newTagNames.length > 0) {
+      insertedTags = await tagsSchema.insertMany(newTagNames.map(tagName => ({ tag: tagName })));
+    }
+  
+    return insertedTags.map(tag => tag._id);
   }
 
-  static async createJobWithTags(jobData: any, tagIds: mongoose.Types.ObjectId[], session: mongoose.ClientSession | null) {
+  static async createJobWithTags(jobData: any, tagIds: ObjectId[], session: mongoose.ClientSession | null) {
     const job = await jobsSchema.create([jobData], session ? { session } : undefined);
-    const jobTagPromises = tagIds.map((tagId: mongoose.Types.ObjectId) => {
+    const jobTagPromises = tagIds.map((tagId: ObjectId) => {
       return jobTagsSchema.create([{ jobId: job[0]._id, tagId }], session ? { session } : undefined);
     });
     await Promise.all(jobTagPromises);
@@ -58,7 +64,7 @@ class JobService {
 
       const { tags, ...jobData }: any = req.body;
 
-      const tagIds = await this.findOrCreateTags(tags);
+      const tagIds: ObjectId[] = await this.findOrCreateTags(tags);
       const job = await this.createJobWithTags(jobData, tagIds, session);
 
       if (session) {

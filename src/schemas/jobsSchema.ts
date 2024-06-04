@@ -2,11 +2,11 @@ import mongoose from "mongoose";
 import { IJob } from "../../types";
 
 const jobsSchema = new mongoose.Schema({
-  title: { type: String, required: true, index: true },
+  title: { type: String, required: true, index: true }, // improves the performance of queries that search for job titles
   description: { type: String, required: true },
   company: { type: String },
-  location: { type: String, index: true },
-  employment_type: { type: String, index: true },
+  location: { type: String, index: true }, // optimizes queries that filter jobs based on their location.
+  employment_type: { type: String, index: true }, // enhances the efficiency of queries filtering jobs by employment type 
   salary: { type: String },
   requirements: { type: String },
   responsibilities: { type: String },

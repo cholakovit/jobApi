@@ -1,8 +1,10 @@
-import express, { Application } from 'express';
+import express, { Application, Request, Response } from 'express';
 import compression from 'compression';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import cors from 'cors';
+import client from 'prom-client'
+
 import SanitizeRequests from './middleware/SanitizeRequests';
 import MongoDBClient from './helper/MongoDBClient';
 import jobRouter from './routers/jobRouter';
@@ -10,11 +12,13 @@ import userRouter from './routers/userRouter';
 import authRouter from './routers/authRouter';
 import ErrorHandler from './middleware/errorHandler';
 import { cspOptions, corsOptions, csrfProtection, limiter, metricsMiddleware, enforceHttps, csrfTokenCookie } from './helper/settings';
+import RequestDurationMiddleware from './middleware/requestDurationMiddleware';
 
 dotenv.config();
 const app: Application = express();
 const sanitizeRequests = new SanitizeRequests();
 const mongoDBClient = new MongoDBClient();
+const requestDurationMiddleware = new RequestDurationMiddleware()
 
 app.use(compression());
 
@@ -53,14 +57,23 @@ app.use(csrfProtection);
 // Ensures that each request is protected against CSRF attacks by including a CSRF token in cookies. --
 app.use(csrfTokenCookie);
 
+// Measure request duration for all incoming requests
+app.use(requestDurationMiddleware.handle)
+
 // For all incoming requests, allowing the application to gather performance metrics.
 app.use(metricsMiddleware);
+
+app.use('/metrics', (req: Request, res: Response) => {
+  res.set('Content-Type', client.register.contentType)
+  res.end(client.register.metrics())
+})
 
 app.use('/jobs', jobRouter);
 app.use('/users', userRouter);
 app.use('/', authRouter);
 
 app.use(ErrorHandler.errorHandler);
+
 
 const start = async () => {
   await mongoDBClient.connectMongoDB();

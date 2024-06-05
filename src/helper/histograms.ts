@@ -21,3 +21,4 @@ export const errorCounter = new Counter({
   labelNames: ['method', 'endpoint', 'status_code']
 }) 
 
+// ESM and old way what is the difference

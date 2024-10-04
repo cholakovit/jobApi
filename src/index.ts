@@ -12,7 +12,7 @@ import userRouter from './routers/userRouter';
 import authRouter from './routers/authRouter';
 import ErrorHandler from './middleware/errorHandler';
 import { cspOptions, corsOptions, csrfProtection, limiter, metricsMiddleware, enforceHttps, csrfTokenCookie } from './helper/settings';
-import RequestDurationMiddleware from './middleware/requestDurationMiddleware';
+import RequestDurationMiddleware from './middleware/RequestDurationMiddleware';
 
 dotenv.config();
 const app: Application = express();

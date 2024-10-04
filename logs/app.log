@@ -719,3 +719,5 @@
 [2024-06-05T14:47:09.788] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Cannot read properties of undefined (reading 'filter')
 [2024-06-05T14:49:47.146] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Cannot read properties of undefined (reading 'filter')
 [2024-06-05T14:50:03.591] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Cannot read properties of undefined (reading 'filter')
+[2024-10-04T13:01:12.620] [ERROR] default - Error Occurred: connect ECONNREFUSED 127.0.0.1:27017
+[2024-10-04T17:55:14.519] [INFO] default - MongoDB Connect!

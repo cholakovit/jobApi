@@ -721,3 +721,107 @@
 [2024-06-05T14:50:03.591] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Cannot read properties of undefined (reading 'filter')
 [2024-10-04T13:01:12.620] [ERROR] default - Error Occurred: connect ECONNREFUSED 127.0.0.1:27017
 [2024-10-04T17:55:14.519] [INFO] default - MongoDB Connect!
+[2024-10-04T18:10:45.176] [INFO] default - MongoDB Connect!
+[2024-10-04T19:02:45.251] [INFO] default - MongoDB Connect!
+[2024-10-04T19:02:48.525] [INFO] default - MongoDB Connect!
+[2024-10-04T19:02:59.540] [INFO] default - MongoDB Connect!
+[2024-10-04T19:06:36.673] [INFO] default - MongoDB Connect!
+[2024-10-04T19:06:45.358] [INFO] default - MongoDB Connect!
+[2024-10-04T19:06:51.296] [INFO] default - MongoDB Connect!
+[2024-10-04T19:09:23.811] [INFO] default - MongoDB Connect!
+[2024-10-04T19:09:35.937] [INFO] default - MongoDB Connect!
+[2024-10-04T19:09:44.639] [INFO] default - TEST!
+[2024-10-04T19:10:01.255] [INFO] default - MongoDB Connect!
+[2024-10-04T19:10:05.783] [INFO] default - MongoDB Connect!
+[2024-10-04T19:10:11.115] [INFO] default - MongoDB Connect!
+[2024-10-04T19:10:15.725] [INFO] default - MongoDB Connect!
+[2024-10-04T19:10:21.278] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:13.312] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:17.015] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:19.080] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:21.257] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:23.236] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:25.563] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:30.845] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:37.246] [INFO] default - MongoDB Connect!
+[2024-10-04T19:17:50.018] [INFO] default - TEST!
+[2024-10-04T19:22:40.005] [INFO] default - MongoDB Connect!
+[2024-10-04T19:23:00.894] [INFO] default - TEST!
+[2024-10-04T19:23:28.422] [INFO] default - MongoDB Connect!
+[2024-10-04T19:23:31.231] [INFO] default - MongoDB Connect!
+[2024-10-04T19:23:42.268] [INFO] default - MongoDB Connect!
+[2024-10-04T19:24:05.842] [INFO] default - TEST!
+[2024-10-04T19:24:27.185] [INFO] default - MongoDB Connect!
+[2024-10-04T19:24:34.903] [INFO] default - MongoDB Connect!
+[2024-10-04T19:24:36.859] [INFO] default - MongoDB Connect!
+[2024-10-04T19:25:00.572] [INFO] default - MongoDB Connect!
+[2024-10-04T19:25:03.995] [INFO] default - TEST!
+[2024-10-04T19:26:23.647] [INFO] default - MongoDB Connect!
+[2024-10-04T19:26:26.679] [INFO] default - MongoDB Connect!
+[2024-10-04T19:26:29.658] [INFO] default - MongoDB Connect!
+[2024-10-04T19:26:35.745] [INFO] default - TEST!
+[2024-10-04T19:26:53.081] [INFO] default - MongoDB Connect!
+[2024-10-04T19:26:56.728] [INFO] default - MongoDB Connect!
+[2024-10-04T19:27:09.578] [INFO] default - MongoDB Connect!
+[2024-10-04T19:27:19.678] [INFO] default - TEST!
+[2024-10-04T19:27:40.189] [INFO] default - MongoDB Connect!
+[2024-10-04T19:27:44.083] [INFO] default - MongoDB Connect!
+[2024-10-04T19:27:59.618] [INFO] default - MongoDB Connect!
+[2024-10-04T19:28:16.581] [INFO] default - TEST!
+[2024-10-04T19:28:34.393] [INFO] default - MongoDB Connect!
+[2024-10-04T19:28:44.673] [INFO] default - MongoDB Connect!
+[2024-10-04T19:28:47.818] [INFO] default - MongoDB Connect!
+[2024-10-04T19:30:28.080] [INFO] default - MongoDB Connect!
+[2024-10-04T19:30:31.785] [INFO] default - MongoDB Connect!
+[2024-10-04T19:30:37.907] [INFO] default - TEST!
+[2024-10-04T19:30:51.017] [INFO] default - MongoDB Connect!
+[2024-10-04T19:30:54.163] [INFO] default - MongoDB Connect!
+[2024-10-04T19:30:57.229] [INFO] default - MongoDB Connect!
+[2024-10-04T19:31:14.863] [INFO] default - MongoDB Connect!
+[2024-10-04T19:31:33.855] [INFO] default - TEST!
+[2024-10-04T19:35:20.344] [INFO] default - MongoDB Connect!
+[2024-10-04T19:35:26.744] [INFO] default - MongoDB Connect!
+[2024-10-04T19:35:31.288] [INFO] default - MongoDB Connect!
+[2024-10-04T19:36:09.222] [INFO] default - MongoDB Connect!
+[2024-10-04T19:36:17.789] [INFO] default - TEST!
+[2024-10-04T19:40:04.241] [INFO] default - MongoDB Connect!
+[2024-10-04T19:40:10.146] [INFO] default - MongoDB Connect!
+[2024-10-04T19:40:15.919] [INFO] default - MongoDB Connect!
+[2024-10-04T19:40:41.934] [INFO] default - MongoDB Connect!
+[2024-10-04T19:40:47.750] [INFO] default - MongoDB Connect!
+[2024-10-04T19:40:51.086] [INFO] default - MongoDB Connect!
+[2024-10-04T19:40:53.940] [INFO] default - MongoDB Connect!
+[2024-10-04T19:41:40.136] [INFO] default - TEST!
+[2024-10-04T19:41:54.975] [INFO] default - MongoDB Connect!
+[2024-10-04T19:42:00.498] [INFO] default - MongoDB Connect!
+[2024-10-04T19:42:08.382] [INFO] default - TEST!
+[2024-10-04T19:42:18.636] [INFO] default - MongoDB Connect!
+[2024-10-04T19:42:23.915] [INFO] default - MongoDB Connect!
+[2024-10-04T19:42:27.965] [INFO] default - MongoDB Connect!
+[2024-10-04T19:42:35.863] [INFO] default - TEST!
+[2024-10-04T19:43:24.222] [INFO] default - MongoDB Connect!
+[2024-10-04T19:43:32.904] [INFO] default - MongoDB Connect!
+[2024-10-04T19:43:43.918] [INFO] default - TEST!
+[2024-10-04T19:59:14.408] [INFO] default - MongoDB Connect!
+[2024-10-04T20:31:21.078] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: Cannot read properties of undefined (reading 'filter')
+[2024-10-04T20:38:44.968] [INFO] default - MongoDB Connect!
+[2024-10-04T20:38:57.752] [INFO] default - MongoDB Connect!
+[2024-10-04T20:45:31.681] [INFO] default - MongoDB Connect!
+[2024-10-04T20:45:38.234] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: jobs validation failed: posted_by: Path `posted_by` is required., description: Path `description` is required.
+[2024-10-04T20:46:59.599] [ERROR] default - ERROR - Code: 500 - Message: Error Occurred: jobs validation failed: posted_by: Cast to ObjectId failed for value "spas" (type string) at path "posted_by" because of "BSONError"
+[2024-10-05T05:36:28.883] [INFO] default - MongoDB Connect!
+[2024-10-05T05:36:40.515] [INFO] default - MongoDB Connect!
+[2024-10-05T05:38:05.974] [INFO] default - MongoDB Connect!
+[2024-10-05T05:38:15.935] [INFO] default - MongoDB Connect!
+[2024-10-05T05:38:19.329] [INFO] default - MongoDB Connect!
+[2024-10-05T05:38:37.416] [INFO] default - MongoDB Connect!
+[2024-10-05T05:38:44.818] [INFO] default - MongoDB Connect!
+[2024-10-05T05:38:55.080] [INFO] default - MongoDB Connect!
+[2024-10-05T05:39:01.402] [INFO] default - MongoDB Connect!
+[2024-10-05T05:39:30.315] [INFO] default - MongoDB Connect!
+[2024-10-05T05:39:55.356] [INFO] default - MongoDB Connect!
+[2024-10-05T05:40:11.111] [INFO] default - MongoDB Connect!
+[2024-10-05T05:40:26.735] [INFO] default - MongoDB Connect!
+[2024-10-05T05:40:35.772] [INFO] default - MongoDB Connect!
+[2024-10-05T05:40:56.644] [INFO] default - MongoDB Connect!
+[2024-10-05T05:41:14.566] [INFO] default - MongoDB Connect!

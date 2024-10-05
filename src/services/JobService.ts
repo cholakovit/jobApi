@@ -61,17 +61,19 @@ class JobService {
         session = await jobsSchema.startSession();
         session.startTransaction();
       }
-
-      const { tags, ...jobData }: any = req.body;
-
+  
+      // Default tags to an empty array if not provided
+      const { tags = [], ...jobData }: any = req.body;
+  
+      // Ensure tags is an array before passing it to findOrCreateTags
       const tagIds: ObjectId[] = await this.findOrCreateTags(tags);
       const job = await this.createJobWithTags(jobData, tagIds, session);
-
+  
       if (session) {
         await session.commitTransaction();
         session.endSession();
       }
-
+  
       return job;
     } catch (error) {
       if (session) {
@@ -81,7 +83,6 @@ class JobService {
       throw new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred: ${(error as Error).message}`);
     }
   }
-
 }
 
 export default JobService

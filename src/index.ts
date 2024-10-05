@@ -13,6 +13,7 @@ import authRouter from './routers/authRouter';
 import ErrorHandler from './middleware/errorHandler';
 import { cspOptions, corsOptions, csrfProtection, limiter, metricsMiddleware, enforceHttps, csrfTokenCookie } from './helper/settings';
 import RequestDurationMiddleware from './middleware/RequestDurationMiddleware';
+import logger from './helper/logger';
 
 dotenv.config();
 const app: Application = express();
@@ -24,7 +25,7 @@ app.use(compression());
 
 // Ensures that all incoming requests are redirected to HTTPS, enhancing the security 
 // of the application by enforcing secure communication. --
-app.use(enforceHttps);
+//app.use(enforceHttps);
 
 // Helmet helps secure the app by setting various HTTP headers, protecting against common web 
 // vulnerabilities like cross-site scripting (XSS), content security policy violations, and other attacks.
@@ -52,10 +53,10 @@ app.use(limiter);
 
 // Helps to protect the application from CSRF attacks by ensuring that requests 
 // made to the server are from authenticated and trusted sources. --
-app.use(csrfProtection);
+//app.use(csrfProtection);
 
 // Ensures that each request is protected against CSRF attacks by including a CSRF token in cookies. --
-app.use(csrfTokenCookie);
+//app.use(csrfTokenCookie);
 
 // Measure request duration for all incoming requests
 app.use(requestDurationMiddleware.handle)
@@ -68,10 +69,14 @@ app.use('/metrics', (req: Request, res: Response) => {
   res.end(client.register.metrics())
 })
 
+app.use('/test', (req: Request, res: Response) => {
+  logger.info(`TEST!`)
+})
+
 app.use('/jobs', jobRouter);
 app.use('/users', userRouter);
 app.use('/', authRouter);
-
+  
 app.use(ErrorHandler.errorHandler);
 
 

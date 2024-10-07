@@ -1,9 +1,7 @@
-import mongoose, { Document, ObjectId } from "mongoose";
+import mongoose, { ObjectId } from "mongoose";
 import jobsSchema from "../schemas/jobsSchema";
 import tagsSchema from "../schemas/tagsSchema";
 import jobTagsSchema from "../schemas/jobTagsSchema";
-import ApiError from "../helper/ApiError";
-import { StatusCodes } from "http-status-codes";
 import { ITag } from "../../types";
 
 
@@ -39,7 +37,7 @@ class JobService {
   
     let insertedTags: ITag[] = [];
     if (newTagNames.length > 0) {
-      insertedTags = await tagsSchema.insertMany(newTagNames.map(tagName => ({ tag: tagName })));
+      insertedTags = await tagsSchema.insertMany(newTagNames.map(tagName => ({ tag: tagName }))) as ITag[];
     }
   
     return insertedTags.map(tag => tag._id);
@@ -56,32 +54,24 @@ class JobService {
 
   static async createJob(req: any): Promise<any> {
     let session: mongoose.ClientSession | null = null;
-    try {
-      if (mongoose.connection.readyState === 1 && await this.isReplicaSet()) {
-        session = await jobsSchema.startSession();
-        session.startTransaction();
-      }
-  
-      // Default tags to an empty array if not provided
-      const { tags = [], ...jobData }: any = req.body;
-  
-      // Ensure tags is an array before passing it to findOrCreateTags
-      const tagIds: ObjectId[] = await this.findOrCreateTags(tags);
-      const job = await this.createJobWithTags(jobData, tagIds, session);
-  
-      if (session) {
-        await session.commitTransaction();
-        session.endSession();
-      }
-  
-      return job;
-    } catch (error) {
-      if (session) {
-        await session.abortTransaction();
-        session.endSession();
-      }
-      throw new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred: ${(error as Error).message}`);
+    if (mongoose.connection.readyState === 1 && await this.isReplicaSet()) {
+      session = await jobsSchema.startSession();
+      session.startTransaction();
     }
+
+    // Default tags to an empty array if not provided
+    const { tags = [], ...jobData }: any = req.body;
+
+    // Ensure tags is an array before passing it to findOrCreateTags
+    const tagIds: ObjectId[] = await this.findOrCreateTags(tags);
+    const job = await this.createJobWithTags(jobData, tagIds, session);
+
+    if (session) {
+      await session.commitTransaction();
+      session.endSession();
+    }
+
+    return job;
   }
 }
 

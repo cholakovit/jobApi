@@ -3,6 +3,7 @@ import { IApiError } from "../../types"
 class ApiError extends Error implements IApiError {
   statusCode: number
   status: string
+  errors?: any
 
   constructor(statusCode: number, message: string, status: string = 'error') {
     super(message)

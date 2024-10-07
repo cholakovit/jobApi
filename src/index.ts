@@ -79,12 +79,16 @@ app.use('/', authRouter);
   
 app.use(ErrorHandler.errorHandler);
 
-
 const start = async () => {
-  await mongoDBClient.connectMongoDB();
-  app.listen(process.env.PORT, () => {
-    console.log(`Server is running at http://localhost:${process.env.PORT}`);
-  });
+  try {
+    await mongoDBClient.connectMongoDB();
+    app.listen(process.env.PORT, () => {
+      console.log(`Server is running at http://localhost:${process.env.PORT}`);
+    });
+  } catch (error) {
+    logger.error(`Failed to connect to MongoDB: ${(error as Error).message}`);
+    process.exit(1);  // Exit the process on MongoDB connection failure
+  }
 };
 
 start();

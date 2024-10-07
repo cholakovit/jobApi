@@ -16,21 +16,17 @@ class AuthController implements IAuthController {
   };
 
   login = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    try {
-      const user: IUser = await this.verifyUsers(req.body.username, req.body.password)
-      if (user) {
-        const token = jwt.sign(
-          { username: user.username, id: user._id, role: user.role }, 
-          process.env.JWT_SECRET!,
-          { expiresIn: '1h' }
-        );
+    const user: IUser = await this.verifyUsers(req.body.username, req.body.password)
+    if (user) {
+      const token = jwt.sign(
+        { username: user.username, id: user._id, role: user.role }, 
+        process.env.JWT_SECRET!,
+        { expiresIn: '1h' }
+      );
 
-        res.status(StatusCodes.OK).send({ user, token })
-      } else {
-        return next(new ApiError(StatusCodes.NOT_FOUND, 'User not found'));
-      }
-    } catch(error) {
-      next(new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred during login: ${(error as Error).message}`));
+      res.status(StatusCodes.OK).send({ user, token })
+    } else {
+      return next(new ApiError(StatusCodes.NOT_FOUND, 'User not found'));
     }
   }
 
@@ -52,46 +48,34 @@ class AuthController implements IAuthController {
   }
 
   register = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    try {
-      const existingUser = await usersSchema.findOne({ username: req.body.username }).exec();
-      if(existingUser) {
-        return next(new ApiError(StatusCodes.BAD_REQUEST, 'Username already exists.'))
-      }
-      const hashPassword: string = await this.hashPassword(req.body.password)
-      const newUser = new usersSchema({
-        username: req.body.username,
-        password: hashPassword,
-        role: req.body.role
-      })
-      await newUser.save()
-      res.status(StatusCodes.CREATED).json({ newUser })
-    } catch(error) {
-      next(new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred during register: ${(error as Error).message}`));
+    const existingUser = await usersSchema.findOne({ username: req.body.username }).exec();
+    if(existingUser) {
+      return next(new ApiError(StatusCodes.BAD_REQUEST, 'Username already exists.'))
     }
+    const hashPassword: string = await this.hashPassword(req.body.password)
+    const newUser = new usersSchema({
+      username: req.body.username,
+      password: hashPassword,
+      role: req.body.role
+    })
+    await newUser.save()
+    res.status(StatusCodes.CREATED).json({ newUser })
   }
 
   private verifyUsers = async (username: string, password: string): Promise<IUser> => {
-    try {
-      const user = await usersSchema.findOne({ username }).exec()
-      if(!user || user.password == null) {
-        throw new ApiError(StatusCodes.NOT_FOUND, 'Username not found or no password set');
-      }
-      const validPassword = await argon2.verify(user.password, password)
-      if(!validPassword) {
-        throw new ApiError(StatusCodes.UNAUTHORIZED, 'Invalid Password!');
-      }
-      return user;
-    } catch(error) {
-      throw new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurred during verifing users: ${(error as Error).message}`);
+    const user = await usersSchema.findOne({ username }).exec()
+    if(!user || user.password == null) {
+      throw new ApiError(StatusCodes.NOT_FOUND, 'Username not found or no password set');
     }
+    const validPassword = await argon2.verify(user.password, password)
+    if(!validPassword) {
+      throw new ApiError(StatusCodes.UNAUTHORIZED, 'Invalid Password!');
+    }
+    return user;
   }
 
   private hashPassword = async (password: string): Promise<string> => {
-    try {
-      return await argon2.hash(password, this.hashOptions);
-    } catch(error) {
-      throw new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, `Error Occurring During Password Hashing: ${(error as Error).message}`);
-    }
+    return await argon2.hash(password, this.hashOptions);
   }
 }
 

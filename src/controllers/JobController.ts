@@ -3,6 +3,9 @@ import JobService from "../services/JobService";
 import { StatusCodes } from "http-status-codes";
 import ApiError from "../helper/ApiError";
 import { IJobController } from "../../types";
+import { plainToClass } from "class-transformer";
+import { CreateJobDto } from "../dto/JobDTO";
+import { validate } from "class-validator";
 
 class JobController implements IJobController {
   listJobs = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
@@ -14,6 +17,14 @@ class JobController implements IJobController {
   };
 
   newJob = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const jobDto = plainToClass(CreateJobDto, req.body)
+    const errors = await validate(jobDto)
+
+    if(errors.length > 0) {
+      const validationErrors = errors.map(error => Object.values(error.constraints!)).flat()
+      return next(new ApiError(StatusCodes.BAD_REQUEST, validationErrors.join(', ')))
+    }
+
     const job = await JobService.createJob(req);
     res.status(StatusCodes.CREATED).json({ job });
   };

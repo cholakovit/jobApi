@@ -928,3 +928,18 @@
 [2024-10-07T14:11:58.182] [INFO] default - MongoDB Connect!
 [2024-10-07T14:12:07.247] [INFO] default - MongoDB Connect!
 [2024-10-07T14:12:26.735] [INFO] default - MongoDB Connect!
+[2024-10-07T18:16:47.418] [INFO] default - MongoDB Connect!
+[2024-10-07T18:22:39.388] [ERROR] default - ERROR - Code: 400 - Message: title should not be empty, title must be a string
+[2024-10-07T18:22:57.203] [ERROR] default - ERROR - Code: 400 - Message: title should not be empty
+[2024-10-07T18:23:30.192] [INFO] default - MongoDB Connect!
+[2024-10-07T18:24:23.505] [INFO] default - MongoDB Connect!
+[2024-10-07T18:24:26.218] [ERROR] default - ERROR - Code: 400 - Message: title should not be empty
+[2024-10-07T18:25:12.976] [INFO] default - MongoDB Connect!
+[2024-10-07T18:32:11.818] [INFO] default - MongoDB Connect!
+[2024-10-07T18:32:17.332] [ERROR] default - ERROR - Code: 400 - Message: title should not be empty
+[2024-10-07T18:36:07.952] [INFO] default - MongoDB Connect!
+[2024-10-07T18:36:13.691] [ERROR] default - ERROR - Code: 400 - Message: Title should not be empty111
+[2024-10-07T18:38:57.286] [INFO] default - MongoDB Connect!
+[2024-10-07T18:53:49.544] [ERROR] default - ERROR - Code: 400 - Message: description should not be empty
+[2024-10-07T18:54:29.720] [INFO] default - MongoDB Connect!
+[2024-10-07T18:54:33.732] [INFO] default - MongoDB Connect!

@@ -15,6 +15,8 @@ import { cspOptions, corsOptions, csrfProtection, limiter, metricsMiddleware, en
 import RequestDurationMiddleware from './middleware/RequestDurationMiddleware';
 import logger from './helper/logger';
 
+import 'reflect-metadata';
+
 dotenv.config();
 const app: Application = express();
 const sanitizeRequests = new SanitizeRequests();

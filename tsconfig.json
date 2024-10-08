@@ -7,7 +7,9 @@
     "strict": true,            // Enable all strict type-checking options
     "esModuleInterop": true,   // Enables interoperability between CommonJS and ES Modules
     "skipLibCheck": true,      // Skip type checking of all declaration files (*.d.ts)
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true, // Enable support for decorators
+    "emitDecoratorMetadata": true // Enables reflection of metadata (required by class-validator)
   },
   "include": ["src/**/*", "types.d.ts"],    // Include all files in the src directory
   "exclude": ["node_modules"] // Exclude the node_modules directory
